@@ -16,7 +16,7 @@ public class HealthSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        health = Mathf.Min(maxHealth, health);
     }
     public void takeDamage(float damage)
     {
