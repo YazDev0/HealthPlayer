@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PauseMenu : MonoBehaviour
+{
+    public GameObject pauseUI; // ÷⁄ Â‰« Canvas √Ê Panel ·ﬁ«∆„… «·»Ê“
+    private bool isPaused = false;
+
+    void Update()
+    {
+        // ≈–« ÷€ÿ «··«⁄» ⁄·Ï “— Escape
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+    }
+
+    public void PauseGame()
+    {
+        pauseUI.SetActive(true);   // «ŸÂ«— «·ﬁ«∆„…
+        Time.timeScale = 0f;       // «Ìﬁ«› «·Êﬁ 
+        isPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        pauseUI.SetActive(false);  // «Œ›«¡ «·ﬁ«∆„…
+        Time.timeScale = 1f;       // —ÃÊ⁄ «·Êﬁ 
+        isPaused = false;
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game!");
+        Application.Quit(); // Ìÿ·⁄ „‰ «··⁄»… (›Ì build ›ﬁÿ)
+    }
+ }
+
