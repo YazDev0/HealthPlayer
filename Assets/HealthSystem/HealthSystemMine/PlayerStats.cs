@@ -1,52 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float maxHealth;
+    [SerializeField] private float maxHealth = 100f;
     private float currentHealth;
 
     public HealthBar healthBar;
+    public GameOverManage gameOverManager;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        // ÊÃßÏ Ãä ÇááÚÈÉ ÊÈÏÃ ÏÇíãðÇ ÈÍÇáÉ ØÈíÚíÉ
+        Time.timeScale = 1f;
 
-        healthBar.SetSliderMax(maxHealth);
+        currentHealth = maxHealth;
+        if (healthBar != null)
+            healthBar.SetSliderMax(maxHealth);
     }
 
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-        healthBar.SetSlider(currentHealth);
+        if (healthBar != null)
+            healthBar.SetSlider(currentHealth);
     }
 
     private void Update()
     {
-      if (currentHealth > maxHealth)
-        {
+        if (currentHealth > maxHealth)
             currentHealth = maxHealth;
-        }
 
-      if (currentHealth <=0)
-        {
+        if (currentHealth <= 0)
             Die();
-        }
-    } 
+    }
 
     public void Heal(float amount)
     {
         currentHealth += amount;
-        healthBar.SetSlider(currentHealth);
+        if (healthBar != null)
+            healthBar.SetSlider(currentHealth);
     }
 
     private void Die()
-
     {
-        Debug.Log("Your Are Dead");
-
+        if (gameOverManager != null)
+        {
+            gameOverManager.ShowGameOver(currentHealth, maxHealth);
+        }
+        else
+        {
+            Debug.LogWarning("GameOverManager ÛíÑ ãÑÊÈØ ÈÇáÜ PlayerStats");
+        }
+    }
 }
-}
-
 
