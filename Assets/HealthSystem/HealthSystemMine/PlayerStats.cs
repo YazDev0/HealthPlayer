@@ -14,7 +14,6 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
-        //  √ﬂœ √‰ «··⁄»…  »œ√ œ«Ì„« »Õ«·… ÿ»Ì⁄Ì…
         Time.timeScale = 1f;
 
         currentHealth = maxHealth;
@@ -53,7 +52,7 @@ public class PlayerStats : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("GameOverManager €Ì— „— »ÿ »«·‹ PlayerStats");
+            Debug.LogWarning("GameOverManager Not Connected PlayerStats");
         }
     }
 }

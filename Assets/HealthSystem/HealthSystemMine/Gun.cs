@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
-    public float fireRate = 0.2f; // «·Êﬁ  »Ì‰ «·ÿ·ﬁ« 
+    public float fireRate = 0.2f;
 
     private void Start()
     {

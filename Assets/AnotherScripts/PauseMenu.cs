@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseUI; // ÷⁄ Â‰« Canvas √Ê Panel ·ﬁ«∆„… «·»Ê“
+    public GameObject pauseUI;
     private bool isPaused = false;
 
     void Update()
     {
-        // ≈–« ÷€ÿ «··«⁄» ⁄·Ï “— Escape
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -25,22 +25,22 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        pauseUI.SetActive(true);   // «ŸÂ«— «·ﬁ«∆„…
-        Time.timeScale = 0f;       // «Ìﬁ«› «·Êﬁ 
+        pauseUI.SetActive(true);   
+        Time.timeScale = 0f;       
         isPaused = true;
     }
 
     public void ResumeGame()
     {
-        pauseUI.SetActive(false);  // «Œ›«¡ «·ﬁ«∆„…
-        Time.timeScale = 1f;       // —ÃÊ⁄ «·Êﬁ 
+        pauseUI.SetActive(false);  
+        Time.timeScale = 1f;       
         isPaused = false;
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit Game!");
-        Application.Quit(); // Ìÿ·⁄ „‰ «··⁄»… (›Ì build ›ﬁÿ)
+        Application.Quit(); 
     }
  }
 

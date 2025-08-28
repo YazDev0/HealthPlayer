@@ -12,7 +12,6 @@ public class GameOverManage : MonoBehaviour
 
     private void Start()
     {
-        // ÊÃßÏ Ãä ÇááÚÈÉ ÔÛÇáÉ ÈÔßá ØÈíÚí ÚäÏ ÈÏÇíÉ Ãí ãÔåÏ
         Time.timeScale = 1f;
 
         if (gameOverUI != null)
@@ -30,13 +29,12 @@ public class GameOverManage : MonoBehaviour
         if (maxHealthText != null)
             maxHealthText.text = "Max Health: " + maxHealth.ToString();
 
-        // ÃæŞİ ÇááÚÈÉ
         Time.timeScale = 0f;
     }
 
     public void RestartGame()
     {
-        Time.timeScale = 1f; // ÑÌÚ ÇááÚÈÉ ÊÔÊÛá ØÈíÚí
+        Time.timeScale = 1f; 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
