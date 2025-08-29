@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour
     public HealthBar healthBar;
     public GameOverManage gameOverManager;
 
+
     private void Start()
     {
         Time.timeScale = 1f;
@@ -54,6 +55,8 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.LogWarning("GameOverManager Not Connected PlayerStats");
         }
+
+
     }
 }
 
