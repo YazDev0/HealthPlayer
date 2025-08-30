@@ -9,6 +9,10 @@ public class Gun : MonoBehaviour
     public float bulletSpeed = 10f;
     public float fireRate = 0.2f;
 
+    [Header("Sound Settings")]
+    public AudioClip shootSound;   
+    public float soundVolume = 1f;
+
     private void Start()
     {
         StartCoroutine(AutoShoot());
@@ -27,5 +31,10 @@ public class Gun : MonoBehaviour
     {
         var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+
+        if (shootSound != null)
+        {
+            AudioSource.PlayClipAtPoint(shootSound, bulletSpawnPoint.position, soundVolume);
+        }
     }
 }
