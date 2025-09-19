@@ -710,19 +710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9250a09d7dfb43a8e5340161fc207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartPoint: 0
-  pointColor:
-    r: 0
-    g: 1
-    b: 0
-    a: 1
-  pointSize: 10
-  showGlow: 1
-  animateSize: 1
-  animationSpeed: 2
-  pointRenderer: {fileID: 0}
-  originalScale: {x: 0, y: 0, z: 0}
-  pointMaterial: {fileID: 0}
 --- !u!1 &274529277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,7 +3349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085100676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.172649, y: -1.223, z: -8.04}
+  m_LocalPosition: {x: 8.172649, y: -1.09, z: -8.04}
   m_LocalScale: {x: 0.6, y: 0.06936388, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3413,19 +3400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc9250a09d7dfb43a8e5340161fc207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartPoint: 1
-  pointColor:
-    r: 0
-    g: 1
-    b: 0
-    a: 1
-  pointSize: 10
-  showGlow: 1
-  animateSize: 1
-  animationSpeed: 2
-  pointRenderer: {fileID: 0}
-  originalScale: {x: 0, y: 0, z: 0}
-  pointMaterial: {fileID: 0}
 --- !u!1 &1149657816
 GameObject:
   m_ObjectHideFlags: 0
